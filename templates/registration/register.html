@@ -1,28 +1,39 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %} 
-
 {% block content %}
 
-<div class="row">
-    <div class="col-md-4 offset-md-4">
-        <div class="card auth-card">
-            <div class="card-body"> 
-                <h4 class="card-title text-center">Cadastrar Usuários</h4>
+<div class="container-fluid">
+    <div class="row">
 
-                <form method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="next" value="{{next}}">
+        <div class="col-md-12">
 
-                    {{form|crispy}}
-                    <button type="submit" class="btn btn-primary btn-block">Registrar</button>
-                    
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Cadastrar Usuários</h3>
+                </div>
+                <form id="quickForm" novalidate="novalidate">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            {% csrf_token %}
+                            <input type="hidden" name="next" value="{{next}}">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                    </div>
                 </form>
-
-                <p class="change-form-p">Já possui conta? <a href="/accounts/login/">Clique aqui</a></p>
-
             </div>
+            <p class="change-form-p">Já possui conta? <a href="/accounts/login/">Clique aqui</a></p>
+        </div>
+        <div class="col-md-6">
         </div>
     </div>
 </div>
+
 
 {% endblock %}

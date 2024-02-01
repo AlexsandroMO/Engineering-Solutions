@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card-body">
+    <div class="row">
+        <div class="offset-1 col-10 list-div">
+            <div class="card card-warning">
+                <div class="card-header">
+                    <h3 class="card-title">Data Sheet</h3>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Enter the code you want to find</label>
+                        <!--<form action="{% url 'open_external_web' %}" method="post">-->
+                        <form action="{% url 'open_external_web' %}" method="post">
+                            {% csrf_token %}
+                            <input type="text" id="meuInput" name="read" class="form-control" placeholder="Enter ...">
+                        </div>
+                        </div>
+                        <div class="card-body">
+                        <!-- <button type="submit" class="btn btn-primary">Submit</button>-->
+                        <button type="submit" class="btn btn-primary" onclick="get_data_sheet()">Submit</button>
+                        </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
+
+<form action="{% url 'open_external_web' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="read" placeholder="Digite algo...">
+    <button type="submit">Enviar</button>
+</form>

@@ -53,19 +53,16 @@
                     <a class="nav-link" href="{% url 'isa' %}">ISA 5.1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="name-tag.html">Instrumentation Name</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="split-text.html">Split Text</a>
+                    <a class="nav-link" href="{% url 'name_inst' %}">Instrumentation Name</a>
                 </li>
 				 <li class="nav-item">
-                    <a class="nav-link" href="data-sheet.html">Data Sheet</a>
+                    <a class="nav-link" href="{% url 'data_sheet' %}">Data Sheet</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="construction.html">Entrar</a>
+                    <a class="nav-link" href="{% url 'admin:index' %}">Entrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="construction.html">Sobre nós</a>
+                    <a class="nav-link" href="{% url 'construction' %}">Sobre nós</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'admin:index' %}">Sair</a>
