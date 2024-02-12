@@ -3,7 +3,6 @@ import os
 #import calccode as CalcCode
 #import numpy as np
 
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,11 +10,9 @@ app = Flask(__name__)
 def home():
   return render_template('home.html')
 
-
 #@app.route('/game_station')
 #def game_station():
 #  return render_template('game-station.html')
-
 
 
 if __name__ == '__main__':
